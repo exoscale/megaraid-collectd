@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use Env qw($COLLECTD_HOSTNAME $COLLECTD_INTERVAL);
 
+$| = 1;
 my $hostname;
 my $interval;
 
