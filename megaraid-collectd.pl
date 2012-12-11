@@ -9,7 +9,6 @@ my $hostname;
 my $interval;
 
 if (defined($COLLECTD_HOSTNAME)) {
-	printf "yeah!\n";
 	$hostname = $COLLECTD_HOSTNAME;
 } else {
 	chomp($hostname = `hostname`);
