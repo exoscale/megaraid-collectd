@@ -20,8 +20,6 @@ if (defined($COLLECTD_INTERVAL)) {
 	$interval = 900;
 }
 
-printf "hostname=%s\ninterval=%d\n", $hostname, $interval;
-
 while (1) {
 	my $init_stamp = time();
 	my $status = `sudo megaclisas-status --nagios`;
