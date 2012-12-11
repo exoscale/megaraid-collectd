@@ -20,10 +20,10 @@ module Megaraid
             disk_ok = $4
             disk_bad = $5
 
-            puts "PUTVAL \"#{@hostname}/megaraid/gauge-array_ok\" interval=#{interval} N:#{array_ok}"
-            puts "PUTVAL \"#{@hostname}/megaraid/gauge-array_bad\" interval=#{interval} N:#{array_bad}"
-            puts "PUTVAL \"#{hostname}/megaraid/gauge-disk_ok\" interval=#{interval} N:#{disk_ok}"
-            puts "PUTVAL \"#{hostname}/megaraid/gauge-disk_bad\" interval=#{interval} N:#{disk_bad}"
+            puts "PUTVAL \"#{@hostname}/megaraid/gauge-array_ok\" interval=#{@interval} N:#{array_ok}"
+            puts "PUTVAL \"#{@hostname}/megaraid/gauge-array_bad\" interval=#{@interval} N:#{array_bad}"
+            puts "PUTVAL \"#{hostname}/megaraid/gauge-disk_ok\" interval=#{@interval} N:#{disk_ok}"
+            puts "PUTVAL \"#{hostname}/megaraid/gauge-disk_bad\" interval=#{@interval} N:#{disk_bad}"
           end
           end_stamp = Time.now.to_i
 
