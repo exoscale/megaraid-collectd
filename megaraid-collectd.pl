@@ -25,7 +25,7 @@ printf "hostname=%s\ninterval=%d\n", $hostname, $interval;
 
 while (1) {
 	my $init_stamp = time();
-	my $status = `megaclisas-status --nagios`;
+	my $status = `sudo megaclisas-status --nagios`;
 	if ($status =~ /^RAID ([a-zA-Z]+) - Arrays: OK:(\d+) Bad:(\d+) - Disks: OK:(\d+) Bad:(\d+)/) {
 		printf "PUTVAL \"%s/megaraid/gauge-array_ok\" interval=%d N:%d\n", $hostname, $interval, $2; 
 		printf "PUTVAL \"%s/megaraid/gauge-array_bad\" interval=%d N:%d\n", $hostname, $interval, $3;
