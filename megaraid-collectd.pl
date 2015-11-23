@@ -14,11 +14,7 @@ if (defined($COLLECTD_HOSTNAME)) {
 	chomp($hostname = `hostname`);
 }
 
-if (defined($COLLECTD_INTERVAL)) {
-	$interval = int($COLLECTD_INTERVAL);
-} else {
-	$interval = 900;
-}
+$interval = 300;
 
 while (1) {
 	my $init_stamp = time();
