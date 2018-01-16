@@ -1,0 +1,7 @@
+Source: megaraid-collectd
+Maintainer: Exoscale <ops@exoscale.ch>
+Build-Depends: debhelper (>= 9), lsb-release
+
+Package: megaraid-collectd
+Architecture: any
+Description: Collectd megaraid module
